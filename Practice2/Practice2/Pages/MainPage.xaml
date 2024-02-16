@@ -1,0 +1,65 @@
+﻿<Page x:Class="Practice2.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practice2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Margin="0,0,0,0"  Grid.ColumnSpan="2" Source="/Practice2;component/maxresdefault.jpg" Stretch="Fill"/>
+
+        <TextBlock Margin="0,0,0,0" FontSize="45" FontWeight="Bold" Text="GayShit Impact" HorizontalAlignment="Left">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+            <TextBlock.Foreground>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="Orange" Offset="0.2"/>
+                    <GradientStop Color="Yellow" Offset="0.4"/>
+                    <GradientStop Color="Green" Offset="0.6"/>
+                    <GradientStop Color="Blue" Offset="0.8"/>
+                    <GradientStop Color="Purple" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+
+
+        </TextBlock>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="23" HorizontalAlignment="Center" Text="Login" FontWeight="Bold"/>
+
+            <TextBox x:Name="TBLogin" Width="180">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBlock FontSize="23" HorizontalAlignment="Center" Text="Password" FontWeight="Bold">
+
+            </TextBlock>
+            <TextBox x:Name="TBPassword" Width="180">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+
+            </TextBox>
+            <Button x:Name="BLogin"
+                    Content="Войти"
+                    Click="BLogin_Click"
+                    Margin="150,30,150,0"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    Background="Orange"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>
